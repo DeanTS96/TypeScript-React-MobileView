@@ -104,3 +104,48 @@
   display: inline-block;
   flex-grow: 1;
 }
+
+.confirmInput{
+  font-size: 1.2em;
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+  height: 50px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(238, 238, 238);
+}
+
+.submitAddressButton{
+  font-size: 1.4em;
+  width: 250px;
+  border-radius: 25px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.submitAddressButton:active{
+  background-color: limegreen
+}
+
+.addAddress{
+  background-color: rgb(78, 159, 235);
+  font-size: 1.4em;
+  width: 250px;
+  border-radius: 25px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border: solid 1px black;
+}
+
+.postCodeDetails{
+  min-height: 30px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  font-size: 0.8em;
+}
