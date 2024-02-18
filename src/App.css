@@ -2,6 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  font-size: 1.1em;
 }
 
 .logo {
@@ -54,4 +55,52 @@
 
 .answerButton:active{
   background-color: limegreen
+}
+
+.page2Checkbox{
+  background-color: rgb(238, 238, 238);
+  width: 300px;
+  min-height: 50px;
+  margin: 0 auto;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  text-align: left;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  border: solid 1px black;
+}
+
+.checkBox-box {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid black;
+  appearance: none;
+  -webkit-appearance: none;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.checkBox-box:checked {
+  background-color: lime;
+}
+
+.continueButton{
+  width: 200px;
+  border-radius: 25px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.continueButton:active{
+  background-color: limegreen
+}
+
+.checkBoxLabel{
+  width: 200px;
+  display: inline-block;
+  flex-grow: 1;
 }

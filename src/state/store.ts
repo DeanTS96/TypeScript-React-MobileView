@@ -1,10 +1,10 @@
 import {configureStore} from "@reduxjs/toolkit";
-import stringReducer from "./testString/testString";
+import stringReducer from "./banksUsed/banksUsed";
 import hadCreditCardLoanReducer from "./hadCreditCardLoan/hadCreditCardLoan";
 
 export const store = configureStore({
     reducer: {
-        testString: stringReducer,
+        banksUsed: stringReducer,
         hadCreditCardLoan: hadCreditCardLoanReducer
 
     }
