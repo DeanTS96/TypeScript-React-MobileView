@@ -1,7 +1,6 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -39,4 +38,20 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.introText{
+  color: lime;
+}
+
+.answerButton{
+  border-radius: 25px;
+  background-color: lightgray;
+  width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+
+.answerButton:active{
+  background-color: limegreen
 }
