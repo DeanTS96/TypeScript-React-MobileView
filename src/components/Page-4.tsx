@@ -27,7 +27,10 @@ function Page4() {
             <p className="questionText">in order to proceed with your claim, please enter your details below:</p>
             <form className="detailsForm" onSubmit={handleSubmit}>
                 <div className="titleContainer">
-                    <select className="titleDD formItem">
+                    <select className="titleDD formItem" defaultValue="" required>
+                        <option value="" disabled hidden>
+                            Title
+                        </option>
                         <option value="Mr">
                             Mr
                         </option>
@@ -39,17 +42,17 @@ function Page4() {
                         </option>
                     </select>
                 </div>
-                <input className="detailsFormItem formItem" type="text" placeholder="First name"/>
-                <input className="detailsFormItem formItem" type="text" placeholder="Last name"/>
+                <input className="detailsFormItem formItem" type="text" pattern="[A-Za-z]+" title="Please enter letters only" placeholder="First name" required/>
+                <input className="detailsFormItem formItem" type="text" pattern="[A-Za-z]+" title="Please enter letters only" placeholder="Last name" required/>
                 <label>
                     Maiden / Previous Name(s)
                 </label>
-                <input className="detailsFormItem formItem" type="text" placeholder="Enter here"/>
+                <input className="detailsFormItem formItem" type="text" pattern="[A-Za-z]+" title="Please enter letters only" placeholder="Enter here" required/>
                 <label>
                     Date of Birth
                 </label>
                 <div className="dateOfBirthContainer">
-                    <select className="dateOfBirthDD formItem" defaultValue="">
+                    <select className="dateOfBirthDD formItem" defaultValue="" required>
                         <option value="" disabled hidden>
                             DD
                         </option>
@@ -147,7 +150,7 @@ function Page4() {
                             31
                         </option>
                     </select>
-                    <select className="dateOfBirthDD formItem" defaultValue="">
+                    <select className="dateOfBirthDD formItem" defaultValue="" required>
                         <option value="" disabled hidden>
                             MM
                         </option>
@@ -188,7 +191,7 @@ function Page4() {
                             12
                         </option>
                     </select>
-                    <select className="dateOfBirthDD formItem" defaultValue="">
+                    <select className="dateOfBirthDD formItem" defaultValue="" required>
                         <option value="" disabled hidden>
                             YYYY
                         </option>

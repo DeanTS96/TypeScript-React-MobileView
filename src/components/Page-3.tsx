@@ -18,15 +18,22 @@ const navigate = useNavigate();
     }
     
     async function getAddress(e: React.FormEvent<HTMLFormElement>) {
+
         e.preventDefault();
-        try {
-            const response: AxiosResponse<PostCodeType> = await axios.get<PostCodeType>('https://news-api-9k2x.onrender.com/api/articles');
-            dispatch(setFoundAddress(true));
-            console.log('success')
-    
-        } catch (error) {
-            dispatch(setFoundAddress(false));
-            console.log('Error', (error as AxiosError).message);
+        const formData = e.target as HTMLFormElement
+        const formDataAsArray = [...formData] as HTMLInputElement[];
+        const postcode = formDataAsArray[0].value
+        const postcodeRegex = /^[A-Za-z]{1,2}[0-9]{1,2}[A-Za-z]?\s?[0-9][A-Za-z]{2}$/;
+        if(postcodeRegex.test(postcode)){
+            try {
+                const response: AxiosResponse<PostCodeType> = await axios.get<PostCodeType>('https://news-api-9k2x.onrender.com/api/articles');
+                dispatch(setFoundAddress(true));
+                console.log('success')
+        
+            } catch (error) {
+                dispatch(setFoundAddress(false));
+                console.log('Error', (error as AxiosError).message);
+            }
         }
     }
 
@@ -55,7 +62,7 @@ const navigate = useNavigate();
             {
                 !foundAddressState ? 
                 <form onSubmit={getAddress}>
-                    <input className="singleDetail" placeholder="Postcode">
+                    <input className="singleDetail" placeholder="Postcode" required>
                     </input>
                     <button type="submit">Search</button>
                 </form> 

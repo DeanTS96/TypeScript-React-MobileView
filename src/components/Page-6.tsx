@@ -12,8 +12,12 @@ function Page6() {
         e.preventDefault();
         const formData = e.target as HTMLFormElement
         const formDataAsArray = [...formData] as HTMLInputElement[];
-        dispatch(setPhoneNumber(formDataAsArray[0].value))
-        navigate('/form/page7');
+        const phoneNumber = formDataAsArray[0].value;
+        const phoneNumberRegex = /^\+?([0-9]{1,3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if(phoneNumberRegex.test(phoneNumber)) {
+            dispatch(setPhoneNumber(phoneNumber))
+            navigate('/form/page7');
+        }
     }
     return (
         <div className="container">
@@ -21,7 +25,7 @@ function Page6() {
             <p className="questionText">Please enter your phone number in the box below</p>
             <p className="postCodeDetails">We'll use this to provide you with updates concerning your claim</p>
             <form onSubmit={handleSubmit}>
-                <input className="singleDetail" type="text" placeholder="Your Phone Number"/>
+                <input className="singleDetail" type="text" placeholder="Your Phone Number" required/>
                 <button type="submit">Continue</button>
             </form>
         </div>

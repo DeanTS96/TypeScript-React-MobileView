@@ -12,8 +12,12 @@ function Page5() {
         e.preventDefault();
         const formData = e.target as HTMLFormElement
         const formDataAsArray = [...formData] as HTMLInputElement[];
-        dispatch(setEmailAddress(formDataAsArray[0].value))
-        navigate('/form/page6');
+        const email = formDataAsArray[0].value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(emailRegex.test(email)) {
+            dispatch(setEmailAddress(email))
+            navigate('/form/page6');
+        }
     }
     return (
         <div className="container">
@@ -21,7 +25,7 @@ function Page5() {
             <p className="questionText">Please enter your email address in the box below</p>
             <p className="postCodeDetails">We'll use this to provide you with updates concerning your claim</p>
             <form onSubmit={handleSubmit}>
-                <input className="singleDetail" type="text" placeholder="Your Email Address"/>
+                <input className="singleDetail" type="text" placeholder="Your Email Address" required/>
                 <button type="submit">Continue</button>
             </form>
         </div>
