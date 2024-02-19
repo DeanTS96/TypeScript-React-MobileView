@@ -22,7 +22,7 @@ function Page4() {
         navigate('/form/page5');
     }
     return (
-        <>
+        <div className="container">
             <p className="introText">Good news! It looks like you might have a claim!</p>
             <p className="questionText">in order to proceed with your claim, please enter your details below:</p>
             <form className="detailsForm" onSubmit={handleSubmit}>
@@ -256,7 +256,7 @@ function Page4() {
                 </div>
                 <button className="continueButton" type="submit">Continue</button>
             </form>
-        </>
+        </div>
     )
 }
 

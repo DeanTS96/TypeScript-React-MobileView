@@ -12,12 +12,12 @@ function Page8() {
         navigate('/form/page-complete');
     }
     return (
-        <>
+        <div className="container">
             <p className="introText">We just need a couple more thigns from you, {userDetails.firstName}...</p>
             <p className="questionText">Heve you ever been in or are proposed to be in an IVA or declared bankrupt?*</p>
             <button className="answerButton" type="submit" onClick={() => handleSubmit(true)}>Yes</button>
             <button className="answerButton" type="submit" onClick={() => handleSubmit(false)}>No</button>
-        </>
+        </div>
     )
 }
 

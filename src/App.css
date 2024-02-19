@@ -41,6 +41,10 @@
   color: #888;
 }
 
+.container{
+  padding: 30px;
+}
+
 .introText{
   color: lime;
 }
@@ -48,7 +52,8 @@
 .answerButton{
   border-radius: 25px;
   background-color: lightgray;
-  width: 300px;
+  min-width: 250px;
+  max-width: 300px;
   display: block;
   margin: 20px auto;
 }
@@ -111,7 +116,8 @@
   display: block;
   margin: 10px auto;
   height: 50px;
-  width: 300px;
+  min-width: 200px;
+  max-width: 300px;
   border: 1px solid black;
   border-radius: 10px;
   background-color: rgb(238, 238, 238);
@@ -143,7 +149,7 @@
   min-height: 30px;
   background-color: rgb(238, 238, 238);
   border-radius: 10px;
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   margin-bottom: 30px;
   padding: 10px;
@@ -189,5 +195,26 @@
 }
 
 .endSubText{
+  font-size: 0.7em;
+}
+
+.singleDetail{
+  background-color: rgb(238, 238, 238); 
+  border-radius: 15px;
+  height: 40px;
+  font-size: 1.1em;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.disclaimer{
+  min-height: 30px;
+  background-color: rgb(238, 238, 238);
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 10px;
   font-size: 0.7em;
 }

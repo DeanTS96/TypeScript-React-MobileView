@@ -14,13 +14,14 @@ function Page7() {
         //navigate('/form/page7');
     }
     return (
-        <>
+        <div className="container">
             <p className="introText">You're almost finished, {userDetails.firstName}. You just need to review this...</p>
             <p className="questionText">Please sign here to submit your Plevin claim.</p>
+            <p className="disclaimer"><span>Disclaimer: </span>By proceeding, you agree to be the terms listed in privacy Policy. Additionally, you agree to b contacted by Veriform Limited, OPOP Services Limited, or any of our affiliated partners in regards to your claim and future oppertunities</p>
             <form onSubmit={handleSubmit}>
                 <button type="submit">Continue</button>
             </form>
-        </>
+        </div>
     )
 }
 

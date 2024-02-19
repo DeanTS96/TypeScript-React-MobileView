@@ -20,7 +20,7 @@ function Page2() {
     }
 //<button onClick={() => dispatch(goodbye("Bye"))}>Bye Button</button>
     return (
-        <>
+        <div className="container">
             <p className="introText">Thanks for that, now...</p>
             <p className="questionText">Please can you tell us which bank(s) or lenders you have used</p>
             <form className="page2Form" onSubmit={handleSubmit}>
@@ -182,7 +182,7 @@ function Page2() {
                 </div>
                 <button type="submit" className="continueButton">Continue</button>
             </form>
-        </>
+        </div>
     )
 }
 

@@ -48,14 +48,14 @@ const navigate = useNavigate();
     }
 
     return (
-        <>
+        <div className="container">
             <p className="introText">That's great! Now please could you enter this in...</p>
             <p className="questionText">Please enter your postcode in the box below</p>
             <p className="postCodeDetails">We need this information for anti-fraud pruposes</p>
             {
                 !foundAddressState ? 
                 <form onSubmit={getAddress}>
-                    <input placeholder="Postcode">
+                    <input className="singleDetail" placeholder="Postcode">
                     </input>
                     <button type="submit">Search</button>
                 </form> 
@@ -75,7 +75,7 @@ const navigate = useNavigate();
                     <button className="addAddress">Add Address</button>
                 </>
             }
-        </>
+        </div>
     )
 }
 

@@ -16,15 +16,15 @@ function Page6() {
         navigate('/form/page7');
     }
     return (
-        <>
+        <div className="container">
             <p className="introText">We just need a couple more things from you {userDetails.firstName}...</p>
             <p className="questionText">Please enter your phone number in the box below</p>
             <p className="postCodeDetails">We'll use this to provide you with updates concerning your claim</p>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Your Phone Number"/>
+                <input className="singleDetail" type="text" placeholder="Your Phone Number"/>
                 <button type="submit">Continue</button>
             </form>
-        </>
+        </div>
     )
 }
 
