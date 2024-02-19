@@ -3,13 +3,15 @@ import stringReducer from "./banksUsed/banksUsed";
 import hadCreditCardLoanReducer from "./hadCreditCardLoan/hadCreditCardLoan";
 import foundAddressReducer from "./foundAddress/foundAddress";
 import addressReducer from "./address/address";
+import userDetailsReducer from "./userDetails/userDetails";
 
 export const store = configureStore({
     reducer: {
         banksUsed: stringReducer,
         hadCreditCardLoan: hadCreditCardLoanReducer,
         foundAddress: foundAddressReducer,
-        address: addressReducer
+        address: addressReducer,
+        userDetails: userDetailsReducer
     }
 })
 

@@ -149,3 +149,41 @@
   padding: 10px;
   font-size: 0.8em;
 }
+
+.formItem{
+  background-color: rgb(238, 238, 238); 
+  border-radius: 15px;
+  height: 40px;
+  font-size: 1.1em;
+}
+
+.dateOfBirthContainer{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.detailsFormItem{
+  margin: 15px auto;
+  display: block;
+  width: 80%;
+  text-align: center;
+}
+
+.dateOfBirthDD{
+  flex: 1;
+  margin: 5px;
+}
+
+.titleContainer{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: left;
+}
+
+.titleDD{
+  width: 100px;
+}

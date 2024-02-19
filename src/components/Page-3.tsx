@@ -19,7 +19,6 @@ const navigate = useNavigate();
     
     async function getAddress(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        console.log('hehe')
         try {
             const response: AxiosResponse<PostCodeType> = await axios.get<PostCodeType>('https://news-api-9k2x.onrender.com/api/articles');
             dispatch(setFoundAddress(true));
