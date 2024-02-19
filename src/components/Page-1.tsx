@@ -1,16 +1,9 @@
-//import {Dispatch, SetStateAction} from "react";
-//import {Page1Value} from '../interfaces'
+
 import {useNavigate} from 'react-router-dom';
-
-//useSelector
 import {useDispatch} from "react-redux";
-
-//import {RootState} from "../state/store";
 import {setHadCreditCardLoan} from "../state/hadCreditCardLoan/hadCreditCardLoan";
-//{hadCreditCardLoan, setHadCreditCardLoan}: Page1Value & {setHadCreditCardLoan: Dispatch<SetStateAction<boolean>>}
 
 function Page1() {
-    //const hadCreditCardLoanState = useSelector((state: RootState) => state.hadCreditCardLoan.value)
     const dispatch = useDispatch();
     const navigate = useNavigate();
     function handleSubmit(bool: boolean): void {
@@ -27,10 +20,4 @@ function Page1() {
     )
 }
 
-/*const Page1: React.FC<Page1Value> = ({ hadCreditCardLoan }) => {
-    console.log(hadCreditCardLoan);
-    return (
-      <h1>Hey</h1>
-    );
-  }*/
 export default Page1

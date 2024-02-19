@@ -1,4 +1,3 @@
-//import { useState } from 'react'
 import './App.css'
 import {Routes, Route} from 'react-router-dom';
 import Page1 from './components/Page-1';
@@ -15,10 +14,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 function App() {
-  //const [hadCreditCardLoan, setHadCreditCardLoan] = useState(false);
-  //hadCreditCardLoan={hadCreditCardLoan} setHadCreditCardLoan={setHadCreditCardLoan}
-  //console.log(hadCreditCardLoan)
-
   return (
     <>
       <Header />

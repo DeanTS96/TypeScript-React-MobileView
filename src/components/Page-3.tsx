@@ -1,4 +1,4 @@
-import axios, { AxiosResponse, AxiosError } from 'axios';
+import axios from 'axios';
 import {useDispatch, useSelector} from "react-redux";
 import {setFoundAddress} from "../state/foundAddress/foundAddress";
 import {setAddress} from "../state/address/address";
@@ -26,13 +26,10 @@ const navigate = useNavigate();
         const postcodeRegex = /^[A-Za-z]{1,2}[0-9]{1,2}[A-Za-z]?\s?[0-9][A-Za-z]{2}$/;
         if(postcodeRegex.test(postcode)){
             try {
-                const response: AxiosResponse<PostCodeType> = await axios.get<PostCodeType>('https://news-api-9k2x.onrender.com/api/articles');
+                await axios.get<PostCodeType>('');
                 dispatch(setFoundAddress(true));
-                console.log('success')
-        
-            } catch (error) {
+            } catch (err) {
                 dispatch(setFoundAddress(false));
-                console.log('Error', (error as AxiosError).message);
             }
         }
     }
