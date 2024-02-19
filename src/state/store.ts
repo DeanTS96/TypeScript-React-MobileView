@@ -6,6 +6,7 @@ import addressReducer from "./address/address";
 import userDetailsReducer from "./userDetails/userDetails";
 import emailAddressReducer from './emailAddress/emailAddress';
 import phoneNumberReducer from './phoneNumber/phoneNumber';
+import haveDeclaredBankruptReducer from './haveDeclaredBankrupt/haveDeclaredBankrupt';
 
 export const store = configureStore({
     reducer: {
@@ -15,7 +16,8 @@ export const store = configureStore({
         address: addressReducer,
         userDetails: userDetailsReducer,
         emailAddress: emailAddressReducer,
-        phoneNumber: phoneNumberReducer
+        phoneNumber: phoneNumberReducer,
+        haveDeclaredBankrupt: haveDeclaredBankruptReducer
     }
 })
 

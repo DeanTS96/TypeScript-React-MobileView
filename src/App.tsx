@@ -8,6 +8,9 @@ import Page4 from './components/Page-4';
 import Page5 from './components/Page-5';
 import Page6 from './components/Page-6';
 import Page7 from './components/Page-7';
+import Page8 from './components/Page-8';
+import PageComplete from './components/Page-complete';
+import PageSorry from './components/Page-sorry';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -27,6 +30,9 @@ function App() {
           <Route path="/form/page5" element={<Page5 />}></Route>
           <Route path="/form/page6" element={<Page6 />}></Route>
           <Route path="/form/page7" element={<Page7 />}></Route>
+          <Route path="/form/page8" element={<Page8 />}></Route>
+          <Route path="/form/page-complete" element={<PageComplete />}></Route>
+          <Route path="/form/page-sorry" element={<PageSorry />}></Route>
       </Routes>
       <Footer />
     </>
