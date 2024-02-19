@@ -23,6 +23,8 @@ function Page4() {
     }
     return (
         <>
+            <p className="introText">Good news! It looks like you might have a claim!</p>
+            <p className="questionText">in order to proceed with your claim, please enter your details below:</p>
             <form className="detailsForm" onSubmit={handleSubmit}>
                 <div className="titleContainer">
                     <select className="titleDD formItem">

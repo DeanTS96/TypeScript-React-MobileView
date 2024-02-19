@@ -4,6 +4,8 @@ import hadCreditCardLoanReducer from "./hadCreditCardLoan/hadCreditCardLoan";
 import foundAddressReducer from "./foundAddress/foundAddress";
 import addressReducer from "./address/address";
 import userDetailsReducer from "./userDetails/userDetails";
+import emailAddressReducer from './emailAddress/emailAddress';
+import phoneNumberReducer from './phoneNumber/phoneNumber';
 
 export const store = configureStore({
     reducer: {
@@ -11,7 +13,9 @@ export const store = configureStore({
         hadCreditCardLoan: hadCreditCardLoanReducer,
         foundAddress: foundAddressReducer,
         address: addressReducer,
-        userDetails: userDetailsReducer
+        userDetails: userDetailsReducer,
+        emailAddress: emailAddressReducer,
+        phoneNumber: phoneNumberReducer
     }
 })
 
